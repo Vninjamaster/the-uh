@@ -1,0 +1,22 @@
+import random
+
+responses = [
+    "oh wow",
+    "hop off GitHub lil bro",
+    "i woke up in a new car"
+]
+
+def generate_response():
+    return random.choice(responses)
+
+print("Type something, and I'll respond! Type 'quit' to exit.")
+
+while True:
+    user_input = input("You: ").lower()  # Get user input and convert to lowercase
+    if user_input == "quit":
+        print("Goodbye!")
+        break
+    
+    response = generate_response()
+    print("Bot:", response)
+
